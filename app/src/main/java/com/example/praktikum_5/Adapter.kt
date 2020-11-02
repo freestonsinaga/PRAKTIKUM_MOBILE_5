@@ -19,7 +19,7 @@ class Adapter (private val list : ArrayList<Users>) : RecyclerView.Adapter<Adapt
 
     override fun onBindViewHolder (holder: Holder, position: Int){
         holder.view.lbList.text = list.get(position).name
-
+        holder.view.halo.text = list.get(position).halo
         holder.view.setOnClickListener{
             Toast.makeText(holder.view.context, "Hallo" + list.get(position).name, Toast.LENGTH_SHORT).show()
         }
